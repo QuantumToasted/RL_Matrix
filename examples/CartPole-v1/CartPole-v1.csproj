@@ -6,14 +6,11 @@
 	  <ImplicitUsings>enable</ImplicitUsings>
 	  <UseWindowsForms>true</UseWindowsForms>
 	  <Nullable>enable</Nullable>
+      <Old>false</Old>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>TRACE</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <Old>false</Old>
   </PropertyGroup>
     
   <PropertyGroup Condition="'$(Old)' == 'true'">
