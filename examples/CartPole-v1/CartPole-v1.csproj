@@ -14,7 +14,7 @@
 
   <PropertyGroup>
     <Old>false</Old>
-  </PropertyGroup>    
+  </PropertyGroup>
     
   <PropertyGroup Condition="'$(Old)' == 'true'">
     <DefineConstants>OLD</DefineConstants>
