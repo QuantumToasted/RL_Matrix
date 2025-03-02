@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	
 	<PropertyGroup>
 		<TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
@@ -19,28 +20,23 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
+	
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<DefineConstants>NET8_0</DefineConstants>
 	</PropertyGroup>
+	
 	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
 		<DefineConstants>NETSTANDARD2_0</DefineConstants>
 	</PropertyGroup>
+	
 	<ItemGroup>
 		<None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
 		<None Include="..\..\icon.png" Pack="true" PackagePath="" />
 		<None Include="..\..\README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 	
-	<!--publish-->
 	<ItemGroup>
-		<PackageReference Include="RLMatrix.Common.Remote" Version="0.4.3.8" />
-	</ItemGroup>
-	
-	<!--dev-->
-	<!--<ItemGroup>
 	  <ProjectReference Include="..\RLMatrix.Common.Remote\RLMatrix.Common.Remote.csproj" />
-	</ItemGroup>-->
-
-
+	</ItemGroup>
 
 </Project>
