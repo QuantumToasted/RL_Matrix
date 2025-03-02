@@ -7,13 +7,9 @@
     <RootNamespace>CartPole_v1_Server</RootNamespace>
   </PropertyGroup>
 
-  <!--<ItemGroup>
-    <PackageReference Include="RLMatrix.Server" Version="0.4.0" />
-  </ItemGroup>-->
-
-  <!--<ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="8.0.6" />
-  </ItemGroup>-->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="8.0.13" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\RLMatrix.Server\RLMatrix.Server.csproj" />

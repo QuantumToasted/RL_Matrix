@@ -8,14 +8,31 @@
 	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Old>false</Old>
+  </PropertyGroup>    
+    
+  <PropertyGroup Condition="'$(Old)' == 'true'">
+    <DefineConstants>OLD</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Gym.NET" Version="0.2.0" />
     <PackageReference Include="Gym.NET.Environments" Version="0.2.0" />
     <PackageReference Include="Gym.NET.Rendering.WinForm" Version="0.2.0" />
-    <PackageReference Include="OneOf" Version="3.0.263" />
-	<PackageReference Include="RLMatrix" Version="0.2.0" />
-	<PackageReference Include="RLMatrix.WinformsChart" Version="0.1.0" />
+    <PackageReference Include="OneOf" Version="3.0.271" />
+  </ItemGroup>
+    
+  <ItemGroup Condition="'$(Old)' == 'true'">
+    <PackageReference Include="RLMatrix" Version="0.2.0" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(Old)' == 'false'">
+    <ProjectReference Include="..\..\src\RLMatrix\RLMatrix.csproj" />
+  </ItemGroup>
 
 </Project>
